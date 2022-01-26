@@ -1,2 +1,2 @@
-# DAM1_lenguajes_de_marcas
+# DAM1 Módulo: Lenguajes de marcas
 Apuntes, ejercicios y prácticas para el módulo Lenguajes de marcas

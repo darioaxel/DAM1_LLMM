@@ -43,3 +43,62 @@ A continuación se dan los valores de colores y tamaños para la web:
 > El width de la página es 60em.
 > Los sidebar ocupan 1⁄5 del width total.
 > Tip: Usa flexbox para el menú y un grid para posicionar los elementos en la página.
+
+[//]: <> (
+### 1.3 RESPONSIVE DESIGN
+We will now make the design responsive by establishing two break points (responsive.css):
+
+When the width of the window reaches 60em, the sidebar should disappear and the page should occupy the full width (100%) of the window. The final result should be this .
+When the width of the window reaches 30em, the menu should collapse into a pull-down menu, the subtitle should not be shown and each news item title should be moved to above the item image. The final result should be this .
+Some helper values:
+
+Characters for the hamburger menu: \2630 (☰) and \2715 (✕).
+Tip: Start by making the menu without any animations (using display to hide and show the menu items). After that, try using transitions to change the height of each menu item instead.
+
+### 1.4 COMMENTS DESIGN  
+
+Add CSS rules (comments.css) to create the design for the comment section that can be seen in the item.html page. The final result should be this .
+
+Some helper values:
+
+Quote character for each comment: \201C (“).
+
+### 1.5 DISEÑO DE FORMULARIOS  
+
+Añade las Add CSS rules (forms.css) to create the design for the register and login forms that can be seen in the register.html and login.html pages. The final result should be this.  
+
+Make sure that in smaller screens, the form fills the content area like this.  
+
+## 2. FLEXBOX/GRID DESIGN  
+
+Without using the flexbox and grid CSS layouts, try to recreate some designs.
+
+Copy the following HTML code: news.html into a new .html file.
+Open it and observe its structure.
+As you might have noticed, this document references a, not yet created, file named style.css as its style sheet. Create that file and modify it so that the page appearance becomes as similar to the following designs as possible: style 1 , style 2 and style 3
+Style 2 uses the following image: 
+Extra: Now try the same exercises, this time using flexbox and grid layouts.
+
+## 3. BLOCKS
+Unzip the following file into some folder: blocks.zip
+Inside a file called style.css, try recreating each one of the four following designs using flexbox and grid layouts:
+3.1
+
+Tips:
+
+Use a flexbox layout for this one.
+Orange block uses the remaining space.
+3.2
+
+3.3
+
+Tips:
+
+First item in yellow block is three times the size of the others.
+Items in red block are reversed.
+Left column has 1⁄4 of the total width.
+3.4
+
+Tips:
+
+Green and orange blocks have half the height of the red and yellow ones.

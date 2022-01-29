@@ -315,3 +315,11 @@ section:empty {...}
 También conocida como pseudo-clase de negación. **:not(x)** recibe como argumento (x), el filtro que usará para descartar elementos en la selección. Por ejemplo, ***div:not(.content)*** seleccionará todos los divs, excepto los que estén identificados con la clase content.
 
 Otro ejemplo útil puede ser **:not(p)**, a través del cual seleccionamos todos los elementos del documento, a excepción de los párrafos. 
+
+
+
+
+
+
+
+Créditos [Sonia Ruiz Cayuela](http://yunevk.github.io)

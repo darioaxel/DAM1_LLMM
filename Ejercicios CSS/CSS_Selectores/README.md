@@ -2,13 +2,13 @@
 
 En este apartado, vamos a hablar sobre las pseudo-clases, que nos permiten aplicar estilos en función de la interacción del usuario, o la posición el mismo dentro de la estructura del documento.  
 
-A continuación vamoa aprender cómo utilizar selectores para identificar elementos en función de su estado, o incluso para seleccionar un determinado rango de ellos. Todo esto lo haremos con la ayuda de las pseudo-clases.  
+A continuación se van a utilizar selectores para identificar elementos en función de su estado, o incluso para seleccionar un determinado rango de ellos. Todo esto se hará con la ayuda de las pseudo-clases.  
 
 ## Pseudo-clases
 
 Las pseudo-clases son parecidas a las clases de HTML, con la diferencia de que no están indicadas explícitamente en la etiqueta, ya que son consecuencia del resultado de la interacción del usuario con determinados elementos, o el estado de los mismos.  
 
-Su sintaxis es sencilla: tienes que poner a la izquierda el selector, seguido de dos puntos **:**, y la pseudo clase. Por ejemplo, a través de a:hover podremos establecer los estilos que se aplicarán a los enlaces **a** cuando se pase el ratón por encima de ellos **:hover**.
+Su sintaxis es sencilla: se ha de poner a la izquierda el selector, seguido de dos puntos **:**, y la pseudo clase. Por ejemplo, a través de a:hover se podrá establecer los estilos que se aplicarán a los enlaces **a** cuando se pase el ratón por encima de ellos **:hover**.
 
 ### Relacionadas con acciones del usuario
 
@@ -25,9 +25,11 @@ a:hover {...}
 a:active {...}
 a:focus {...}
 ```
+Ejemplos: 
+[:hover](https://codepen.io/darioaxel/pen/podjwOj)  En este ejemplo, prueba a pasar tu cursor sobre la palabra "hola". Para probar, puedes cambiar la pseudo-clase :hover tal y como te indica el comentario dentro del css. 
 
 ### De enlaces
-Las pseudo-clases **:link** y **:visited** definen si un link ha sido o no visitado (es decir, si se ha pulsado o no sobre él). Para dar estilos a un enlace que todavía no ha sido visitado, usaremos **:link**, y para el que ya haya sido visitado, **:visited**.
+Las pseudo-clases **:link** y **:visited** definen si un link ha sido o no visitado (es decir, si se ha pulsado o no sobre él). Para dar estilos a un enlace que todavía no ha sido visitado, se utilizará la pseudo-clase **:link**, y para el que ya haya sido visitado, **:visited**.
 
 ```CSS
 a:link {...}
@@ -41,9 +43,9 @@ Estas pseudo-clases tienen un comportamiento muy similar a las anteriores, pero 
 
 > **:disabled** es el caso contario. Se aplica a elementos que no están activos, normalmente porque tienen el atributo disabled en su etiqueta de HTML.
 
-> **:checked** se aplica a los elementos checkbox y radio button de un formario, cuando están seleccionados.
+> **:checked** se aplica a los elementos checkbox y radio button de un formario, siempre y cuando están seleccionados.
 
->**:indeterminate** también se aplica a checkbox y radio button. En este caso, a través de esta pseudo-clase podremos establecer los estilos de estos elementos cuando su estado sea indeterminado. Según la MDN, el estado de un checkbox puede ser indeterminado cuando se establece esta propiedad a true mediante JavaScript. A su vez, un radio button es indeterminado cuando todos los que tienen el mismo valor name no están marcados. Como podrás imaginar, esta propiedad es mucho más inusual que las anteriores.
+>**:indeterminate** también se aplica a checkbox y radio button. En este caso, a través de esta pseudo-clase se pueden establecer los estilos de estos elementos cuando su estado sea indeterminado. Según la MDN, el estado de un checkbox puede ser indeterminado cuando se establece esta propiedad a true mediante JavaScript. A su vez, un radio button es indeterminado cuando todos los que tienen el mismo valor name no están marcados. Como se puede imaginar, esta propiedad es mucho más inusual que las anteriores.
 
 ```CSS
 input:enabled {...}
@@ -52,19 +54,19 @@ input:checked {...}
 input:indeterminate {...}
 ```
 ### Relacionadas con la estructura y posición
-Estas son las pseudo-clases más potentes, ya que nos permiten hacer una gran cantidad de cosas ahorrándonos estableces clases y atributos innecesarios en nuestro código HTML.
+Estas son las pseudo-clases más potentes, ya que permiten hacer una gran cantidad de cosas ahorrando establecer clases y atributos innecesarios en el código HTML.
 
 Como su nombre indica, se basan en cómo están posicionados los elementos del árbol del documentos.
 
 #### **:first-child**, **:last-child** y **:only-child**
 
-Vamos a empezar por la relacionadas con la posición como hijo: **:first-child**, **:last-child** y **:only-child**.
+La relacionadas con la posición como hijo: **:first-child**, **:last-child** y **:only-child**.
 
-> **:first-child** selecciona al elemento solo si es el primer hijo.
+> **:first-child** selecciona al elemento sólo si es el primer hijo dentro de la estructura de la etiqueta padre dentro del DOM.
 
 > **:last-child** es al contrario, selecciona al elemento que es el último hijo.
 
-> **:only-child** seleccina solo a elementos que son hijos únicos, es decir, que no tienen hermanos.
+> **:only-child** selecciona sólo a elementos que son hijos únicos, es decir, que no tienen hermanos.
 
 ```CSS
 p:first-child {...}
@@ -94,13 +96,13 @@ h2:only-child {...}
 
 Los siguientes son muy similares y son los relacionados con la posición como hijo del mismo tipo: **:first-of-type**, **:last-of-type** y **:only-of-type**.
 
-Como se puede imaginar, seleccionar el primero, último y único hijo de un elemento puede ser muy útil. Pero, ¿y qué pasa si queremos seleccionar solo el que es de un mismo tipo? Para eso tenemos estas pseudo-clases.
+Como se puede imaginar, seleccionar el primero, último y único hijo de un elemento puede ser muy útil. Pero, ¿qué pasa si queremos seleccionar solo el que es de un mismo tipo? Para eso tenemos estas pseudo-clases.
 
 > **:first-of-type** selecciona al elemento de su tipo que sea el primer hijo.
 
 > **:last-of-type** es al contrario, selecciona al elemento del mismo tipo que sea último hijo.
 
-> **:only-of-type** seleccina al elemento que sea el único hijo de su tipo.
+> **:only-of-type** selecciona al elemento que sea el único hijo de su tipo.
 
 Al principio, puede parecer igual que los anteriores, pero veamos un ejemplo:
 
@@ -122,13 +124,13 @@ h2:only-of-type {...}
 </section>
 ```
 
-Como se puede ver, solo se tiene en cuenta el tipo de elemento, ignorando el resto de hermanos de distinto tipo. Si en lugar de :first-of-type, :last-of-type y :only-of-type hubiéramos utilizado :first-child, :last-child y :only-child, no se habría seleccionado ningún elemento. ¿Se entiende ahora la diferencia?
+Como se puede ver, solo se tiene en cuenta el tipo de elemento, ignorando el resto de hermanos de distinto tipo. Si en lugar de **:first-of-type**, **:last-of-type** y **:only-of-type** hubiéramos utilizado **:first-child**, **:last-child** y **:only-child**, no se habría seleccionado ningún elemento. Ahora se pueden entender mejor la diferencia.
 
-Siguiendo con las pseudo-clases relacionadas con la estructura y la posición. Hasta ahora sabemos seleccionar los primeros hijos, los últimos y los únicos. ¿Qué pasa con resto? ¿Podemos seleccionar el hijo que queramos, esté donde esté? La respuesta es sí, gracias a :nth-child(n), :nth-last-child(n), :nth-of-type(n) y :nth-last-of-type(n). En estas pseudo-clases utilizaremos números y expresiones algebraicas (será lo que incluirás dentro de los paréntesis) para realizar las selecciones, como vamos a ver a continuación.
+Siguiendo con las pseudo-clases relacionadas con la estructura y la posición. Hasta ahora se ha visto cómo seleccionar los primeros hijos, los últimos y los únicos. ¿Qué pasa con resto? ¿Es posible seleccionar el hijo que se requiera, esté donde esté? La respuesta es sí, gracias a **:nth-child(n)**, **:nth-last-child(n)**, **:nth-of-type(n)** y **:nth-last-of-type(n)**. En estas pseudo-clases utilizaremos números y expresiones algebraicas (será lo que incluirás dentro de los paréntesis) para realizar las selecciones, como vamos a ver a continuación.
 
-:nth-child(n) y :nth-last-child(n)
+#### **:nth-child(n) y :nth-last-child(n)
 
-:nth-child(n) selecciona elementos contando desde el primer hijo, sin importar el tipo de este, ni del resto de hijos. Por ejemplo, si quieres un elemento de cada tres, puedes usar la expresión 3n.
+> **:nth-child(n)** selecciona elementos contando desde el primer hijo, sin importar el tipo de este, ni del resto de hijos. Por ejemplo, si quieres un elemento de cada tres, puedes usar la expresión 3n.
 
 ```CSS
 p:nth-child(3n) {...}
@@ -167,7 +169,7 @@ p:nth-child(3n+1) {...}
     <p>...</p>
 </div>
 ```
-Otra posibilidad de este tipo de pseudo-clase es que podemos seleccionar únicamente un hijo según su posición. Por ejemplo, si en vez de seleccionar un elemento de cada tres, solo queremos seleccionar el tercero, usaríamos (3).
+Otra posibilidad de este tipo de pseudo-clase es que se puede seleccionar únicamente un hijo según su posición. Por ejemplo, si en vez de seleccionar un elemento de cada tres, se desea seleccionar el tercero, se usa (3).
 
 ```CSS
 p:nth-child(3) {...}
@@ -187,7 +189,7 @@ p:nth-child(3) {...}
 ```
 ¿Hay más? ¡Pues sí!
 
-¿Qué pasa si queremos seleccionar los tres primeros? Para eso, podemos usar la expresión (-n+3).
+¿Qué pasa si se quiere seleccionar los tres primeros? Para eso, se puede usar la expresión (-n+3).
 
 ```CSS
 p:nth-child(-n+3) {...}
@@ -205,11 +207,11 @@ p:nth-child(-n+3) {...}
     <p>...</p>
 </div>
 ```
-¿Es potente o no es potente? Imagina todas las posibilidades.
+Este sistema es muy potente y permite muchas más posibilidades.
 
-Ahora vamos a pasar de :nth-child(n) a :nth-last-child(n).
+Ahora se pasará de **:nth-child(n)** a **:nth-last-child(n)**.
 
-:nth-last-child(n) funciona prácticamente igual que :nth-child(n) , con la única diferencia de que, en vez de empezar a contar desde el principio, empieza por el final.
+**:nth-last-child(n)** funciona prácticamente igual que **:nth-child(n)** , con la única diferencia de que, en vez de empezar a contar desde el principio, empieza por el final.
 
 Por ejemplo, para seleccionar el tercero empezando desde el final:
 
@@ -247,11 +249,11 @@ p:nth-last-child(-n+3) {...}
     <p>Elemento seleccionado</p>
 </div>
 ```
-:nth-of-type(n) y :nth-last-of-type(n)
+#### **:nth-of-type(n)** y **:nth-last-of-type(n)**
 
-Si has llegado hasta aquí y lo has estado entendiendo todo, probablemente ya te imaginarás el funcionamiento de :nth-of-type(n) y :nth-last-of-type(n). Si no es así, ¡no pasa nada! Voy a explicarlo también.
+El funcionamiento de **:nth-of-type(n)** y **:nth-last-of-type(n)** es muy similar a los anteriores.
 
-:nth-of-type(n) cuenta solo los hijos del mismo tipo (es decir, como si los de otros tipos no existieran), comenzando desde el principio.
+> **:nth-of-type(n)** cuenta solo los hijos del mismo tipo (es decir, como si los de otros tipos no existieran), comenzando desde el principio.
 
 ```CSS
 p:nth-of-type(3) {...}
@@ -264,9 +266,9 @@ p:nth-of-type(3) {...}
     <p>Elemento seleccionado</p>
 </section>
 ```
-¿Ves la diferencia? Si hubiéramos utilizado :nth-last-child(n) se habría seleccionado el elemento p anterior, ya que se empezaría a contar desde el primero si importar el tipo, que en este caso sería el h1 .
+ Si se hubiera utilizado :nth-last-child(n) se habría seleccionado el elemento p anterior, ya que se empezaría a contar desde el primero si importar el tipo, que en este caso sería el h1 .
 
-:nth-last-of-type(n) funciona de forma muy similar, pero contando desde el final (recuerda, del mismo tipo).
+**:nth-last-of-type(n)** funciona de forma muy similar, pero contando desde el final (recuerda, del mismo tipo).
 
 ```CSS
 p:nth-last-of-type(3) {...}
@@ -279,12 +281,13 @@ p:nth-last-of-type(3) {...}
     <span>...</span>
 </section>
 ```
-target
-Seguro que en muchas ocasiones habrás utilizado enlaces para acceder a secciones de una misma página. Una URL con el símbolo # seguido de un texto enlaza a un elemento concreto de la página, cuyo ID corresponde con el del enlace.
+#### target
+
+En muchas ocasiones se utilizan enlaces para acceder a secciones de una misma página. Una URL con el símbolo # seguido de un texto enlaza a un elemento concreto de la página, cuyo ID corresponde con el del enlace.
 
 Se conoce como elemento target a aquel que ha sido enlazado (es decir, cuando ya aparece en la URL el símbolo # seguido de su ID).
 
-La pseudo-clase :target nos permite aplicar estilos al elemento target en cuestión. Puede parecer un poco confuso el concepto en un principio, pero con el siguiente ejemplo seguro que te queda todo mucho más claro.
+La pseudo-clase **:target** permite aplicar estilos al elemento target en cuestión. Puede parecer un poco confuso el concepto en un principio, pero con el siguiente ejemplo lo deja todo mucho más claro.
 
 ```CSS
 :target {
@@ -294,8 +297,8 @@ La pseudo-clase :target nos permite aplicar estilos al elemento target en cuesti
 }
 ```
 
-empty
-Esta pseudo-clase nos permite identificar elementos que no contienen ningún hijo o nodo de texto.
+#### empty
+Esta pseudo-clase permite identificar elementos que no contienen ningún hijo o nodo de texto.
 
 Es útil para elementos dinámicos. Por ejemplo, para mostrar un mensaje de No se han encontrado resultados cuando se hace una búsqueda y no se muestra ningún elemento.
 
@@ -308,7 +311,7 @@ section:empty {...}
 </section>
 <section></section> <!-- Elemento seleccionado -->
 ```
-not(x)
-También conocida como pseudo-clase de negación. :not(x) recibe como argumento (x), el filtro que usará para descartar elementos en la selección. Por ejemplo, div:not(.content) seleccionará todos los divs, excepto los que estén identificados con la clase content.
+#### not(x)
+También conocida como pseudo-clase de negación. **:not(x)** recibe como argumento (x), el filtro que usará para descartar elementos en la selección. Por ejemplo, ***div:not(.content)*** seleccionará todos los divs, excepto los que estén identificados con la clase content.
 
-Otro ejemplo útil puede ser :not(p), a través del cual seleccionamos todos los elementos del documento, a excepción de los párrafos. 
+Otro ejemplo útil puede ser **:not(p)**, a través del cual seleccionamos todos los elementos del documento, a excepción de los párrafos. 

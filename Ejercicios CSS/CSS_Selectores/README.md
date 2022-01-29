@@ -128,7 +128,7 @@ Como se puede ver, solo se tiene en cuenta el tipo de elemento, ignorando el res
 
 Siguiendo con las pseudo-clases relacionadas con la estructura y la posición. Hasta ahora se ha visto cómo seleccionar los primeros hijos, los últimos y los únicos. ¿Qué pasa con resto? ¿Es posible seleccionar el hijo que se requiera, esté donde esté? La respuesta es sí, gracias a **:nth-child(n)**, **:nth-last-child(n)**, **:nth-of-type(n)** y **:nth-last-of-type(n)**. En estas pseudo-clases utilizaremos números y expresiones algebraicas (será lo que incluirás dentro de los paréntesis) para realizar las selecciones, como vamos a ver a continuación.
 
-#### **:nth-child(n) y :nth-last-child(n)
+#### **:nth-child(n)** y **:nth-last-child(n)**
 
 > **:nth-child(n)** selecciona elementos contando desde el primer hijo, sin importar el tipo de este, ni del resto de hijos. Por ejemplo, si quieres un elemento de cada tres, puedes usar la expresión 3n.
 
@@ -211,7 +211,7 @@ Este sistema es muy potente y permite muchas más posibilidades.
 
 Ahora se pasará de **:nth-child(n)** a **:nth-last-child(n)**.
 
-**:nth-last-child(n)** funciona prácticamente igual que **:nth-child(n)** , con la única diferencia de que, en vez de empezar a contar desde el principio, empieza por el final.
+> **:nth-last-child(n)** funciona prácticamente igual que **:nth-child(n)** , con la única diferencia de que, en vez de empezar a contar desde el principio, empieza por el final.
 
 Por ejemplo, para seleccionar el tercero empezando desde el final:
 
@@ -268,7 +268,7 @@ p:nth-of-type(3) {...}
 ```
  Si se hubiera utilizado :nth-last-child(n) se habría seleccionado el elemento p anterior, ya que se empezaría a contar desde el primero si importar el tipo, que en este caso sería el h1 .
 
-**:nth-last-of-type(n)** funciona de forma muy similar, pero contando desde el final (recuerda, del mismo tipo).
+> **:nth-last-of-type(n)** funciona de forma muy similar, pero contando desde el final (recuerda, del mismo tipo).
 
 ```CSS
 p:nth-last-of-type(3) {...}
@@ -287,7 +287,7 @@ En muchas ocasiones se utilizan enlaces para acceder a secciones de una misma p�
 
 Se conoce como elemento target a aquel que ha sido enlazado (es decir, cuando ya aparece en la URL el símbolo # seguido de su ID).
 
-La pseudo-clase **:target** permite aplicar estilos al elemento target en cuestión. Puede parecer un poco confuso el concepto en un principio, pero con el siguiente ejemplo lo deja todo mucho más claro.
+> La pseudo-clase **:target** permite aplicar estilos al elemento target en cuestión. Puede parecer un poco confuso el concepto en un principio, pero con el siguiente ejemplo lo deja todo mucho más claro.
 
 ```CSS
 :target {

@@ -148,7 +148,8 @@ p:nth-child(3n) {...}
 ```
 Como se puede ver, aquí empezamos a contar desde cero.
 
-También se puede seleccionar un elemento de cada tres, pero empezando por uno en concreto. Por ejemplo, si se quiere, al igual que antes, seleccionar uno de cada tres, pero empezando por el primero, se usaría la expresión (3n+1).
+También se puede seleccionar un elemento de cada tres, pero empezando por uno en concreto. Por ejemplo, si se quiere, al igual que antes, seleccionar uno de cada tres, pero empezando por el primero, se usaría
+ la expresión (3n+1).
 
 ```CSS
 p:nth-child(3n+1) {...}
@@ -310,4 +311,4 @@ section:empty {...}
 not(x)
 También conocida como pseudo-clase de negación. :not(x) recibe como argumento (x), el filtro que usará para descartar elementos en la selección. Por ejemplo, div:not(.content) seleccionará todos los divs, excepto los que estén identificados con la clase content.
 
-Otro ejemplo útil puede ser :not(p), a través del cual seleccionamos todos los elementos del documento, a excepción de los párrafos.
+Otro ejemplo útil puede ser :not(p), a través del cual seleccionamos todos los elementos del documento, a excepción de los párrafos. 

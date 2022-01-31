@@ -41,13 +41,19 @@ a > .title {
 /* 1. Con el siguiente selector se crea una única línea 
 para la barra de navegación con todos los elementos en ella*/ 
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
+    /* 3. Indicamos al contendor principal que alinee tanto el logo
+    como el contendor que tiene los items verticalmente en el centro*/
+    align-items: center;
   }
 
-
+/* 2. Se hace al div contenedor de los items como flex
+para que todos se integren en una línea*/
 .nav-links {
+    display: flex;
     list-style: none;
 }
   

@@ -37,7 +37,16 @@ a > .title {
     vertical-align: middle;
     margin: 0 5px 0 5px;
 }
- 
+
+/* 1. Con el siguiente selector se crea una única línea 
+para la barra de navegación con todos los elementos en ella*/ 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
 .nav-links {
     list-style: none;
 }

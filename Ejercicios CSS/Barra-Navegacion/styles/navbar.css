@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+}
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+nav {
+    width: 100%;
+    background-color: navy;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+nav > a {   
+    display: flex;
+    text-decoration: none;
+    padding-top: 10px; 
+}
+
+a > .title {   
+    color: white;
+    font: 2.5em Arial, sans-serif;
+    margin: 0 15px 0 15px;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 90px;
+    vertical-align: middle;
+    margin: 0 5px 0 5px;
+}
+ 
+.nav-links {
+    list-style: none;
+}
+  
+.nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
+  
+.nav-item:hover {
+    background-color: white;
+}
+  
+.nav-item:hover a {
+    color: navy;
+}
+  

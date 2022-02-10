@@ -35,17 +35,17 @@ A continuación se Some helper values:
 
 ### 1.2 POSICIONAMIENTO
 
-En este segundo apartado se han de colocar los elementos dibujados en sus posiciones correspondientes (layout.css). El resultado final debe ser similar a [este](./step2.htlm) .
+En este segundo apartado se han de colocar los elementos dibujados en sus posiciones correspondientes (layout.css). El resultado final debe ser similar a [este]("./step2.htlm") .
 
 A continuación se dan los valores de colores y tamaños para la web:
 >
 > * El color del background es #EDEFF0.
-<<<<<<< HEAD
-> El width de la página es 60em.
-> Los sidebar ocupan 1⁄5 del width total.
+> * El width de la página es 60em.
+> * Los sidebar ocupan 1⁄5 del width total.
+> 
 > Tip: Usa flexbox para el menú y un grid para posicionar los elementos en la página.
 
-[//]: <> (
+
 ### 1.3 RESPONSIVE DESIGN
 We will now make the design responsive by establishing two break points (responsive.css):
 

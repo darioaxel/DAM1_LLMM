@@ -1,0 +1,32 @@
+.photo {
+    margin: 20px auto;
+    width: 640px;
+    height: 440px;
+    background: url("../images/trent-reznor.jpeg") top center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.top-left {
+    width: 150px;
+    height: 75px;   
+}
+
+.bottom-centered {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.6;
+}
+.news-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    padding: 2px 10px 2px 10px;
+}
+.news-resume {
+    padding: 2px 10px 2px 10px;
+}
